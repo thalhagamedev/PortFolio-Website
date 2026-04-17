@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MazeBusters | Thalha Ahamed</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .comic-container { max-width: 1100px; margin: 2.5rem auto; padding: 0 2rem; }
+  .mb-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;}
+  .mb-header h1 { font-family: 'Bangers', cursive; font-size: 4rem; color: #1a1a2e; text-shadow: 4px 4px 0 #FFE033; line-height: 1; margin: 0; }
+  .hero-img { width: 100%; border: 6px solid #1a1a2e; object-fit: cover; max-height: 500px; display: block; box-shadow: 8px 8px 0 #1a1a2e;}
+  
+  .comic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+  .c-panel { border: 5px solid #1a1a2e; padding: 2rem; position: relative; background: #fff; box-shadow: 8px 8px 0 #1a1a2e; transition: transform 0.1s; }
+  .c-panel:hover { transform: translate(-3px, -3px); box-shadow: 11px 11px 0 #1a1a2e; }
+  
+  .span-2 { grid-column: span 2; }
+  .span-3 { grid-column: span 3; }
+  
+  .bg-yellow { background: #FFE033; }
+  .bg-red { background: #FF3355; color: #fff;}
+  .bg-blue { background: #4ECDC4; }
+  .bg-dark { background: #1a1a2e; color: #fff;}
+  .bg-white { background: #fff; }
+  
+  .c-title { font-family: 'Bangers', cursive; font-size: 2.2rem; margin-bottom: 1rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; }
+  .c-title.dark { color: #1a1a2e; }
+  .c-title.light { color: #FFE033; }
+  
+  .c-text { font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem; font-weight: 700; }
+  .c-text.dark { color: #1a1a2e; }
+  .c-text.light { color: #f0f0f0; }
+  
+  .c-img { width: 100%; border: 4px solid #1a1a2e; display: block; margin-bottom: 1rem; background: #1a1a2e; object-fit: contain; }
+  
+  .tag-box { display: inline-block; padding: 0.3rem 0.8rem; background: #1a1a2e; color: #FFE033; font-family: 'Bangers', cursive; font-size: 1.2rem; margin: 0.2rem; border: 2px solid #fff;}
+  
+  .ui-showcase { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top:1.5rem;}
+  .ui-showcase img { height: 450px; border: 5px solid #1a1a2e; background:#fff;}
+  
+  @media(max-width: 900px) {
+    .comic-grid { grid-template-columns: 1fr 1fr; }
+    .span-3 { grid-column: span 2; }
+  }
+  @media(max-width: 650px) {
+    .comic-grid { grid-template-columns: 1fr; }
+    .span-2, .span-3 { grid-column: span 1; }
+  }
+</style>
+</head>
+<body class="halftone">
+
+<nav>
+  <a href="index.html" class="logo">THALHA.DEV</a>
+  <div class="nav-links">
+    <a href="index.html">BACK TO PORTFOLIO</a>
+  </div>
+</nav>
+
+<div class="comic-container">
+  
+  <div class="mb-header" style="justify-content: flex-end; margin-bottom: 1.5rem;">
+    <a href="index.html#games" class="back-btn" style="margin:0;">← BACK TO GAMES</a>
+  </div>
+  
+  <div style="position:relative; margin-bottom:2rem;">
+    <img src="MazeBusters Cover.jpg" alt="MazeBusters Cover" class="hero-img" style="margin-bottom:0; width:100%;">
+    <h1 style="position:absolute; bottom:1.5rem; left:2rem; font-family:'Bangers',cursive; font-size:clamp(3.5rem, 8vw, 6.5rem); color:#FFF; text-shadow:6px 6px 0 #1a1a2e, -2px -2px 0 #1a1a2e, 2px -2px 0 #1a1a2e, -2px 2px 0 #1a1a2e, 2px 2px 0 #1a1a2e; margin:0; line-height:1; transform:rotate(-2deg); letter-spacing:0.04em; pointer-events:none;">MAZEBUSTERS</h1>
+  </div>
+
+  <div class="comic-grid">
+    
+    <!-- Origin Story -->
+    <div class="c-panel bg-yellow span-2">
+      <h2 class="c-title dark">💡 THE IDEA — RETHINKING THE MAZE</h2>
+      <p class="c-text dark">For a long time, I had “Video Game Designer” in my bio, but I didn’t feel like one. I needed a project that truly represented me.</p>
+      <div style="background:#fff; border:3px solid #1a1a2e; padding:1.2rem; margin:1rem 0; box-shadow:4px 4px 0 #1a1a2e;">
+        <p class="c-text dark" style="font-size:1.3rem; margin:0;">What if a maze wasn’t about finding the path… <span style="color:#FF3355; font-family:'Bangers';font-size:1.6rem;letter-spacing:0.04em;">but creating it?</span></p>
+      </div>
+      <p class="c-text dark">Players are placed in a closed maze where they dynamically break walls and shape their own path.<br><strong>No correct solution. Multiple routes. Player-driven decisions.</strong></p>
+    </div>
+
+    <!-- Stats Box -->
+    <div class="c-panel bg-dark">
+      <h2 class="c-title light">⚙️ THE SPECS</h2>
+      <div style="margin-bottom:1rem;">
+        <span class="tag-box">UNITY</span>
+        <span class="tag-box">C#</span>
+        <span class="tag-box">FIGMA</span>
+        <span class="tag-box">AUDACITY</span>
+      </div>
+      <p class="c-text light"><strong>Scope:</strong> Solo Indie Dev<br><strong>Content:</strong> 40 Unique Levels<br><strong>Mechanics:</strong> Breaking, Switching, Pushing, Teleporting</p>
+      <p class="c-text light" style="color:#FFE033; font-family:'Bangers'; font-size:1.3rem; letter-spacing:0.05em; margin-top:1.5rem;">"I didn’t just build a game — I designed one."</p>
+    </div>
+
+    <!-- Mechanic 1: Breakable Walls -->
+    <div class="c-panel bg-red span-2">
+      <h2 class="c-title" style="color:#FFE033;">💥 BREAKABLE WALLS</h2>
+      <div style="display:flex; gap:1.5rem; margin-bottom:1rem; flex-wrap:wrap;">
+        <img src="Breakable Walls 1.jpg" alt="Pink Maze" class="c-img" style="flex:1; min-width:180px; margin-bottom:0;">
+        <img src="Breakable Walls 2.jpg" alt="Red Maze" class="c-img" style="flex:1; min-width:180px; margin-bottom:0;">
+      </div>
+      <p class="c-text light">Destroy walls. Create new routes. Optimize movement. This core mechanic completely transforms the space from a fixed puzzle into a dynamic, shifting system.</p>
+    </div>
+
+    <!-- Mechanic 2: Switches -->
+    <div class="c-panel bg-white">
+      <h2 class="c-title dark">🔀 SWITCHES</h2>
+      <img src="Switch .jpg" alt="Blue Maze Switch" class="c-img">
+      <p class="c-text dark">Cause and effect! Activating switches changes states—opening some paths while closing others. Think ahead before leaping.</p>
+    </div>
+
+    <!-- Mechanic 3: Movables -->
+    <div class="c-panel bg-blue">
+      <h2 class="c-title dark">📦 PUSH BLOCKS</h2>
+      <img src="Movable Walls.jpg" alt="Yellow Maze Movable" class="c-img">
+      <p class="c-text dark">Tactical problem solving. Push walls to bridge gaps, block areas, or entirely redesign the chamber's layout.</p>
+    </div>
+
+    <!-- Mechanic 4: Teleport -->
+    <div class="c-panel bg-yellow">
+      <h2 class="c-title dark">🌀 TELEPORTATION</h2>
+      <img src="Teleport.jpg" alt="Teleport Mechanic" class="c-img" style="max-height:300px; object-fit:contain; margin-bottom:1rem;">
+      <p class="c-text dark">Non-linear spatial reasoning. Instantly warp across the map to discover unexpected routes and bypass critical roadblocks seamlessly.</p>
+    </div>
+
+    <!-- More Coming Soon -->
+    <!-- Huge UI Section -->
+    <div class="c-panel bg-dark span-3" style="text-align:center; padding:3rem;">
+      <h2 class="c-title light" style="font-size:3.5rem; margin-bottom:0.8rem; text-shadow:4px 4px 0 #FF3355;">🎨 A COMIC-BOOK UI WIN</h2>
+      <p class="c-text light" style="max-width:700px; margin:0 auto; font-size:1.1rem; color:#fff;">UI was tough. I moved away from boring minimalism and dove into a bold, Ben-Day dot, comic-book aesthetic using Figma. And the result practically speaks for itself.</p>
+      
+      <div class="ui-showcase">
+        <img src="UI 1.jpg" alt="Main Layout UI">
+        <img src="UI 2.jpg" alt="Level Select UI">
+      </div>
+    </div>
+
+    <!-- Post Mortem -->
+    <div class="c-panel bg-red span-3" style="text-align:center; background:url('MazeBusters Cover.jpg') center/cover; position:relative;">
+      <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(255,51,85,0.9);"></div>
+      <div style="position:relative; z-index:1;">
+        <h2 class="c-title light" style="color:#FFF; font-size:2.8rem; text-shadow:3px 3px 0 #1a1a2e;">🏁 THE DEVELOPMENT JOURNEY</h2>
+        <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <div style="background:#FFF; color:#1a1a2e; padding:1.5rem; flex:1; min-width:260px; border:4px solid #1a1a2e; box-shadow:4px 4px 0 #1a1a2e; transform:rotate(-2deg);">
+            <h3 style="font-family:'Bangers'; font-size:1.8rem; margin-bottom:0.5rem;">SOLO INDIE GRIND</h3>
+            <p style="font-size:1.05rem; font-weight:700;">Handled everything from Game Design to Audio alone. It was exhausting but incredibly rewarding to see my vision come to life.</p>
+          </div>
+          <div style="background:#FFE033; color:#1a1a2e; padding:1.5rem; flex:1; min-width:260px; border:4px solid #1a1a2e; box-shadow:4px 4px 0 #1a1a2e; transform:rotate(1deg);">
+            <h3 style="font-family:'Bangers'; font-size:1.8rem; margin-bottom:0.5rem;">LEVEL DESIGN</h3>
+            <p style="font-size:1.05rem; font-weight:700;">I knew placing cubes manually would be hectic, so I built a Tilemap 3D workflow from the start! It created the perfect workspace for snapping prefabs, allowing me to easily design 40 puzzle levels for now.</p>
+          </div>
+          <div style="background:#4ECDC4; color:#1a1a2e; padding:1.5rem; flex:1; min-width:260px; border:4px solid #1a1a2e; box-shadow:4px 4px 0 #1a1a2e; transform:rotate(-1deg);">
+            <h3 style="font-family:'Bangers'; font-size:1.8rem; margin-bottom:0.5rem;">PLATFORM LAUNCH</h3>
+            <p style="font-size:1.8rem; font-weight:700; color:#FF3355; font-family:'Bangers'; margin-top:1.5rem; letter-spacing:0.05em; text-shadow:2px 2px 0 #1a1a2e;">COMING SOON</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 THALHA AHAMED — GAME DEVELOPER</p>
+  <p>TO BE CONTINUED...</p>
+</footer>
+
+</body>
+</html>

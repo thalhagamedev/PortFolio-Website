@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PortDoor | Thalha Ahamed</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .comic-container { max-width: 1100px; margin: 2.5rem auto; padding: 0 2rem; }
+  .mb-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;}
+  .mb-header h1 { font-family: 'Bangers', cursive; font-size: 4rem; color: #1a1a2e; text-shadow: 4px 4px 0 #FFE033; line-height: 1; margin: 0; }
+  .hero-img { width: 100%; border: 6px solid #1a1a2e; object-fit: cover; max-height: 500px; display: block; box-shadow: 8px 8px 0 #1a1a2e;}
+  
+  .comic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+  .c-panel { border: 5px solid #1a1a2e; padding: 2rem; position: relative; background: #fff; box-shadow: 8px 8px 0 #1a1a2e; transition: transform 0.1s; }
+  .c-panel:hover { transform: translate(-3px, -3px); box-shadow: 11px 11px 0 #1a1a2e; }
+  
+  .span-2 { grid-column: span 2; }
+  .span-3 { grid-column: span 3; }
+  
+  .bg-yellow { background: #FFE033; }
+  .bg-red { background: #FF3355; color: #fff;}
+  .bg-blue { background: #4ECDC4; }
+  .bg-dark { background: #1a1a2e; color: #fff;}
+  .bg-white { background: #fff; }
+  .bg-green { background: #27ae60; color: #fff; }
+  .bg-green p, .bg-green h2 { color: #fff; }
+  
+  .c-title { font-family: 'Bangers', cursive; font-size: 2.2rem; margin-bottom: 1rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; }
+  .c-title.dark { color: #1a1a2e; }
+  .c-title.light { color: #FFE033; }
+  
+  .c-text { font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem; font-weight: 700; }
+  .c-text.dark { color: #1a1a2e; }
+  .c-text.light { color: #f0f0f0; }
+  
+  .c-img { width: 100%; border: 4px solid #1a1a2e; display: block; margin-bottom: 1rem; background: #1a1a2e; object-fit: contain; }
+  
+  .tag-box { display: inline-block; padding: 0.3rem 0.8rem; background: #1a1a2e; color: #FFE033; font-family: 'Bangers', cursive; font-size: 1.2rem; margin: 0.2rem; border: 2px solid #fff;}
+  
+  @media(max-width: 900px) {
+    .comic-grid { grid-template-columns: 1fr 1fr; }
+    .span-3 { grid-column: span 2; }
+  }
+  @media(max-width: 650px) {
+    .comic-grid { grid-template-columns: 1fr; }
+    .span-2, .span-3 { grid-column: span 1; }
+  }
+</style>
+</head>
+<body class="halftone">
+
+<nav>
+  <a href="PortFolio Website.html" class="logo">THALHA.DEV</a>
+  <div class="nav-links">
+    <a href="PortFolio Website.html">BACK TO PORTFOLIO</a>
+  </div>
+</nav>
+
+<div class="comic-container">
+  
+  <div class="mb-header" style="justify-content: space-between; margin-bottom: 1.5rem;">
+    <a href="PortFolio Website.html#games" class="back-btn" style="margin:0;">← BACK TO GAMES</a>
+    <a href="https://whizzgames.itch.io/portdoor" target="_blank" class="back-btn" style="margin:0; background:#FF3355; color:#fff;">PLAY ON ITCH.IO ▶</a>
+  </div>
+  
+  <div style="position:relative; margin-bottom:2rem;">
+    <img src="PortDoor home screen UI.jpg" alt="PortDoor Cover" class="hero-img" style="margin-bottom:0; width:100%;">
+    <h1 style="position:absolute; bottom:1.5rem; left:2rem; font-family:'Bangers',cursive; font-size:clamp(3.5rem, 8vw, 6.5rem); color:#FFE033; text-shadow:6px 6px 0 #1a1a2e, -2px -2px 0 #1a1a2e, 2px -2px 0 #1a1a2e, -2px 2px 0 #1a1a2e, 2px 2px 0 #1a1a2e; margin:0; line-height:1; transform:rotate(-2deg); letter-spacing:0.04em; pointer-events:none;">PORTDOOR</h1>
+  </div>
+
+  <div class="comic-grid">
+    
+    <!-- Origin Box -->
+    <div class="c-panel bg-yellow span-2">
+      <h2 class="c-title dark">🚪 WHAT'S BEHIND THE DOOR?</h2>
+      <p class="c-text dark">Before I started making structured projects, I wanted to try something entirely original. This was my very first time building a game from scratch based purely on an idea.</p>
+      <div style="background:#fff; border:3px solid #1a1a2e; padding:1.2rem; margin:1rem 0; box-shadow:4px 4px 0 #1a1a2e;">
+        <p class="c-text dark" style="font-size:1.3rem; margin:0;">A top-down 2D game built around <span style="color:#FF3355; font-family:'Bangers';font-size:1.6rem;letter-spacing:0.04em;">mystery & strategy</span>.</p>
+      </div>
+      <p class="c-text dark">You teleport through doors without knowing where they lead. Memory-based mapping, strategic enemy avoidance, and exploration combine into a frantic survival experience.</p>
+    </div>
+
+    <!-- Stats Box -->
+    <div class="c-panel bg-dark">
+      <h2 class="c-title light">⚔️ THE JAM RULES</h2>
+      <div style="margin-bottom:1rem;">
+        <span class="tag-box">UNITY</span>
+        <span class="tag-box">GAME JAM</span>
+        <span class="tag-box">7 DAYS</span>
+      </div>
+      <p class="c-text light"><strong>Theme:</strong> What's Behind the Door?<br><strong>Dev Time:</strong> Brackeys 2024.1 (1 Week)<br><strong>Hardware:</strong> Potato Laptop Constraints</p>
+    </div>
+
+    <!-- Mechanic Images -->
+    <div class="c-panel bg-blue span-2">
+      <h2 class="c-title dark">🧠 MY FIRST STEP INTO DESIGN</h2>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:1rem; margin-bottom:1rem;">
+        <img src="PortDoor 1.jpg" alt="PortDoor Gameplay 1" class="c-img" style="height:200px; object-fit:cover; margin-bottom:0; background:#fff;">
+        <img src="Portdoor 2" alt="PortDoor Gameplay 2" class="c-img" style="height:200px; object-fit:cover; margin-bottom:0; background:#fff;">
+        <img src="portdoor 3.jpg" alt="PortDoor Gameplay 3" class="c-img" style="height:200px; object-fit:cover; margin-bottom:0; background:#fff;">
+      </div>
+      <p class="c-text dark">I was always more interested in design than pure coding. This project became my first serious attempt at designing mechanics and thinking critically about player experience!</p>
+    </div>
+
+    <!-- The Scrap -->
+    <div class="c-panel bg-red">
+      <h2 class="c-title" style="color:#FFE033;">🗑️ SCRAPPING IT ALL</h2>
+      <p class="c-text light">I made a tough decision on Day 3: I completely scrapped the game and restarted from scratch.</p>
+      <p class="c-text light" style="margin-top:1.5rem;">It was terrifying to pull the plug mid-jam, but it taught me a crucial lesson about relying on a strong core idea and never settling for mediocre.</p>
+    </div>
+
+    <!-- The Survive Mode -->
+    <div class="c-panel bg-green span-2" style="display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap;">
+      <div style="flex:2; min-width:250px;">
+        <h2 class="c-title light" style="color:#FFF; text-shadow:2px 2px 0 #1a1a2e;">🚀 AFTER THE DUST SETTLED</h2>
+        <p class="c-text light" style="text-shadow:1px 1px 0 #1a1a2e;">I didn't abandon it after the jam ended. I polished the UI, flushed out persistent bugs, and added new levels!</p>
+        <p class="c-text light" style="text-shadow:1px 1px 0 #1a1a2e;">I even successfully implemented a brand new <strong style="color:#FFE033; font-family:'Bangers'; font-size:1.3rem;">SURVIVE MODE</strong>.</p>
+      </div>
+      <img src="PortDoor Survive.jpg" alt="Survive Mode" class="c-img" style="flex:1; min-width:180px; max-height:250px; object-fit:cover; margin-bottom:0; background:#fff;">
+    </div>
+
+    <!-- The Deadline Chaos -->
+    <div class="c-panel bg-white">
+      <h2 class="c-title dark" style="color:#FF3355;">⏱️ DEADLINE CHAOS</h2>
+      <p class="c-text dark">I pushed my code exactly 30 minutes before the jam locked.</p>
+      <p class="c-text dark" style="margin-top:1.5rem;">...And then I realized I accidentally uploaded my entire raw project directory instead of the playable zip file! 😅</p>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="c-panel bg-dark span-3" style="text-align:center;">
+      <h2 class="c-title light" style="font-size:3rem; margin-bottom:1.5rem;">📈 THE BIG TAKEAWAY</h2>
+      <div style="display:flex; justify-content:center; gap:2rem; flex-wrap:wrap;">
+        <div style="background:#FFF; color:#1a1a2e; padding:1.5rem; flex:1; min-width:250px; border:4px solid #FFE033; transform:rotate(-1deg);">
+          <h3 style="font-family:'Bangers'; font-size:1.8rem; margin-bottom:0.5rem; text-transform:uppercase;">Constraints Breed Creativity</h3>
+          <p style="font-size:0.9rem; font-weight:700;">A potato laptop and a tiny 7-day window forced me to cut the fluff and laser-focus on one strong mechanic.</p>
+        </div>
+        <div style="background:#FF3355; color:#fff; padding:1.5rem; flex:1; min-width:250px; border:4px solid #FFE033; transform:rotate(1deg);">
+          <h3 style="font-family:'Bangers'; font-size:1.8rem; margin-bottom:0.5rem; text-transform:uppercase;">Simplicity Shines</h3>
+          <p style="font-size:0.9rem; font-weight:700; color:#fff;">A mechanic as incredibly simple as "where does this door go?" can feel overwhelmingly profound with the right design.</p>
+        </div>
+        <div style="background:#FFE033; color:#1a1a2e; padding:1.5rem; flex:1; min-width:250px; border:4px solid #fff; transform:rotate(-1deg);">
+          <h3 style="font-family:'Bangers'; font-size:1.8rem; margin-bottom:0.5rem; text-transform:uppercase;">The Game Format</h3>
+          <p style="font-size:0.9rem; font-weight:700;">Always read the submission guidelines and absolutely double-check your exported builds (Lesson painfully learned).</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 THALHA AHAMED — GAME DEVELOPER</p>
+  <p>TO BE CONTINUED...</p>
+</footer>
+
+</body>
+</html>
