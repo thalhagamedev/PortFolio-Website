@@ -66,9 +66,12 @@ nav{background:#1a1a2e;border-bottom:4px solid #FFE033;padding:0.9rem 2.5rem;dis
 .card-link.red{background:#FF3355;color:#fff;}
 
 #projects{border-top:5px solid #1a1a2e;}
-.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);}
-.proj-card{border-right:4px solid #1a1a2e;border-bottom:4px solid #1a1a2e;padding:2rem 1.8rem;background:#fff;position:relative;overflow:hidden;}
-.proj-card:nth-child(3n){border-right:none;}
+.projects-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;}
+.projects-grid::-webkit-scrollbar{height:12px;}
+.projects-grid::-webkit-scrollbar-track{background:#1a1a2e;}
+.projects-grid::-webkit-scrollbar-thumb{background:#FFE033;border:3px solid #1a1a2e;}
+.proj-card{flex:0 0 33.333%;scroll-snap-align:start;border-right:4px solid #1a1a2e;border-bottom:4px solid #1a1a2e;padding:2rem 1.8rem;background:#fff;position:relative;overflow:hidden;}
+.proj-card:last-child{border-right:5px solid #1a1a2e;}
 .proj-card:nth-child(even){background:#FFF5E0;}
 .proj-num{font-family:'Bangers',cursive;font-size:3.5rem;color:#FFE033;-webkit-text-stroke:2px #1a1a2e;position:absolute;top:-0.3rem;right:0.8rem;line-height:1;pointer-events:none;z-index:10;}
 .proj-card h3{font-family:'Bangers',cursive;font-size:1.6rem;color:#1a1a2e;letter-spacing:0.04em;margin-bottom:0.5rem;line-height:1.1;}
@@ -108,17 +111,20 @@ footer p{font-family:'Bangers',cursive;font-size:1rem;color:#fff;letter-spacing:
   .hero-right{border-top:5px solid #1a1a2e;min-height:50vh;}
   .about-grid{grid-template-columns:1fr;}
   .about-right{border-top:4px solid #1a1a2e;}
-  .projects-grid{grid-template-columns:1fr 1fr;}
-  .proj-card:nth-child(3n){border-right:4px solid #1a1a2e;}
-  .proj-card:nth-child(even){border-right:none;}
+  .projects-grid{display:flex;overflow-x:auto;}
+  .proj-card{flex:0 0 50%;}
+  .proj-card:nth-child(even){border-right:4px solid #1a1a2e;}
   .skills-grid{grid-template-columns:1fr 1fr;}
   .skill-panel:nth-child(2){border-right:none;}
   .skill-panel:nth-child(3){border-right:4px solid #1a1a2e;border-top:4px solid #1a1a2e;}
   .skill-panel:last-child{border-top:4px solid #1a1a2e;}
 }
 @media(max-width:580px){
-  .games-grid,.projects-grid{grid-template-columns:1fr;}
+  .games-grid{grid-template-columns:1fr;}
+  .projects-grid{display:flex;overflow-x:auto;}
+  .proj-card{flex:0 0 85%;}
   .game-card,.proj-card{border-right:none !important;}
+  .proj-card{border-right:4px solid #1a1a2e !important;}
   .skills-grid{grid-template-columns:1fr;}
   .skill-panel{border-right:none !important;border-top:4px solid #1a1a2e;}
   .skill-panel:first-child{border-top:none;}

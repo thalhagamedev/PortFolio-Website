@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talk with Joker | Thalha Ahamed</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root {
+    --j-purple: #9b59b6;
+    --j-green: #2ecc71;
+    --j-dark-purple: #8e44ad;
+    --j-dark-green: #27ae60;
+    --j-yellow: #FFE033;
+    --j-white: #ffffff;
+    --j-dark: #1a1a2e;
+  }
+  .comic-container { max-width: 1100px; margin: 2.5rem auto; padding: 0 2rem; }
+  .mb-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;}
+  .hero-img { width: 100%; border: 6px solid var(--j-dark); object-fit: cover; max-height: 500px; display: block; box-shadow: 8px 8px 0 var(--j-dark);}
+  
+  .comic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+  .c-panel { border: 5px solid var(--j-dark); padding: 2rem; position: relative; background: #fff; box-shadow: 8px 8px 0 var(--j-dark); transition: transform 0.1s; }
+  .c-panel:hover { transform: translate(-3px, -3px); box-shadow: 11px 11px 0 var(--j-dark); }
+  
+  .span-2 { grid-column: span 2; }
+  .span-3 { grid-column: span 3; }
+  
+  .bg-purple { background: var(--j-purple); color: #fff; }
+  .bg-green { background: var(--j-green); color: var(--j-dark); }
+  .bg-dark { background: var(--j-dark); color: #fff; }
+  .bg-white { background: #fff; }
+  .bg-yellow { background: var(--j-yellow); }
+  
+  .c-title { font-family: 'Bangers', cursive; font-size: 2.2rem; margin-bottom: 1rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; }
+  .c-title.dark { color: var(--j-dark); }
+  .c-title.light { color: var(--j-yellow); }
+  
+  .c-text { font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem; font-weight: 700; }
+  .c-text.dark { color: var(--j-dark); }
+  .c-text.light { color: #f0f0f0; }
+  
+  .c-img { width: 100%; border: 4px solid var(--j-dark); display: block; margin-bottom: 1rem; background: var(--j-dark); object-fit: cover; }
+  
+  .tag-box { display: inline-block; padding: 0.3rem 0.8rem; background: var(--j-dark); color: var(--j-yellow); font-family: 'Bangers', cursive; font-size: 1.2rem; margin: 0.2rem; border: 2px solid #fff;}
+  
+  .ha-ha { font-family: 'Bangers', cursive; color: var(--j-green); position: absolute; font-size: 1.5rem; opacity: 0.6; pointer-events: none;}
+
+  @media(max-width: 900px) {
+    .comic-grid { grid-template-columns: 1fr 1fr; }
+    .span-3 { grid-column: span 2; }
+  }
+  @media(max-width: 650px) {
+    .comic-grid { grid-template-columns: 1fr; }
+    .span-2, .span-3 { grid-column: span 1; }
+  }
+</style>
+</head>
+<body class="halftone">
+
+<nav>
+  <a href="index.html" class="logo">THALHA.DEV</a>
+  <div class="nav-links">
+    <a href="index.html">BACK TO PORTFOLIO</a>
+  </div>
+</nav>
+
+<div class="comic-container">
+  
+  <div class="mb-header" style="justify-content: flex-end; margin-bottom: 1.5rem;">
+    <a href="index.html#projects" class="back-btn" style="margin:0;">← BACK TO MINI PROJECTS</a>
+  </div>
+  
+  <div style="position:relative; margin-bottom:2rem;">
+    <img src="joker image 3.jpg" alt="Talk with Joker Cover" class="hero-img" style="margin-bottom:0; width:100%;">
+    <h1 style="position:absolute; bottom:1.5rem; left:2rem; font-family:'Bangers',cursive; font-size:clamp(3.5rem, 8vw, 6.5rem); color:var(--j-green); text-shadow:6px 6px 0 var(--j-purple), -2px -2px 0 var(--j-dark), 2px -2px 0 var(--j-dark), -2px 2px 0 var(--j-dark), 2px 2px 0 var(--j-dark); margin:0; line-height:1; transform:rotate(-2deg); letter-spacing:0.04em; pointer-events:none;">TALK WITH JOKER</h1>
+  </div>
+
+  <div class="comic-grid">
+    
+    <!-- The Idea -->
+    <div class="c-panel bg-purple span-2">
+      <h2 class="c-title light">💡 THE IDEA — AI-DRIVEN NPC CONVERSATIONS</h2>
+      <p class="c-text">I wanted to experiment with integrating AI into NPC interactions — specifically for real-time conversations.</p>
+      <div style="background:#fff; border:3px solid var(--j-dark); padding:1.2rem; margin:1rem 0; box-shadow:4px 4px 0 var(--j-dark); position:relative;">
+        <span class="ha-ha" style="top:-10px; left:10px;">HA!</span>
+        <span class="ha-ha" style="bottom:-10px; right:10px;">HA HA!</span>
+        <p class="c-text dark" style="font-size:1.3rem; margin:0;">Instead of relying on traditional dialogue trees, I explored how AI could allow NPCs to respond <span style="color:var(--j-purple); font-family:'Bangers';font-size:1.6rem;letter-spacing:0.04em;">dynamically to players.</span></p>
+      </div>
+      <p class="c-text">To test this idea, I built a small experiment where players can interact directly with <strong>The Joker</strong> in real time, powered by the <strong>Gemini API</strong>.</p>
+    </div>
+
+    <!-- Stats Box -->
+    <div class="c-panel bg-dark">
+      <h2 class="c-title" style="color:var(--j-green);">⚙️ THE SPECS</h2>
+      <div style="margin-bottom:1rem;">
+        <span class="tag-box">UNITY</span>
+        <span class="tag-box">C#</span>
+        <span class="tag-box">GEMINI API</span>
+        <span class="tag-box">TEXTMESHPRO</span>
+      </div>
+      <p class="c-text light"><strong>Scope:</strong> Mini AI Experiment<br><strong>Focus:</strong> NPC Conversations<br><strong>System:</strong> Real-time AI responses<br><strong>Character:</strong> The Joker</p>
+      <p class="c-text" style="color:var(--j-yellow); font-family:'Bangers'; font-size:1.3rem; letter-spacing:0.05em; margin-top:1.5rem;">"WHY SO SERIOUS? LET'S CHAT!"</p>
+    </div>
+
+    <!-- AI Interaction -->
+    <div class="c-panel bg-green span-2">
+      <h2 class="c-title dark">🧠 AI-BASED INTERACTION</h2>
+      <img src="joker image 1.jpeg" alt="Joker AI Interaction" class="c-img">
+      <p class="c-text dark">Project replaces scripted dialogue with AI-driven responses. Each interaction is unique, with no fixed dialogue paths. The NPC responds dynamically to player input instantly.</p>
+    </div>
+
+    <!-- Character Implementation -->
+    <div class="c-panel bg-white">
+      <h2 class="c-title dark" style="color:var(--j-purple);">🎭 CHARACTER SYSTEM</h2>
+      <p class="c-text dark">To maintain consistency, I designed a <strong>prompt-based personality system</strong>:</p>
+      <ul style="font-weight:700; color:var(--j-dark); margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Ensures stays in character</li>
+        <li>Short & expressive responses</li>
+        <li>Constant tone & behavior</li>
+      </ul>
+      <p class="c-text dark">Typing + animation enhance immersion.</p>
+    </div>
+
+    <!-- Interaction Flow -->
+    <div class="c-panel bg-purple">
+      <h2 class="c-title light">✍️ FLOW</h2>
+      <div style="background:var(--j-dark); border:3px solid var(--j-white); padding:1.2rem; margin:1.5rem 0; box-shadow:4px 4px 0 var(--j-dark);">
+        <p class="c-text" style="color:var(--j-green); font-size:1.1rem; margin-bottom: 0.5rem;">1. Player enters input</p>
+        <p class="c-text" style="color:var(--j-white); font-size:1.1rem; margin-bottom: 0.5rem;">2. AI processes it instantly</p>
+        <p class="c-text" style="color:var(--j-yellow); font-size:1.1rem; margin:0;">3. Response generated</p>
+      </div>
+      <p class="c-text">Instant processing for a seamless conversational experience.</p>
+    </div>
+
+    <!-- Why it Matters -->
+    <div class="c-panel bg-green span-2">
+      <h2 class="c-title dark">🏁 WHY THIS MATTERS</h2>
+      <div style="display:flex; gap:1.5rem; margin-bottom:1rem; flex-wrap:wrap;">
+        <img src="joker image 2.jpeg" alt="Joker AI Future" class="c-img" style="flex:1; min-width:280px; margin-bottom:0;">
+      </div>
+      <p class="c-text dark">Traditional NPCs are limited by scripts. AI allows for <strong>emergent storytelling</strong> and more <strong>immersive player experiences</strong>. This experiment explores the future of character-driven interaction design.</p>
+    </div>
+
+    <!-- GitHub Link CTA -->
+    <div class="c-panel bg-dark span-3" style="text-align:center; padding:3.5rem;">
+      <h2 class="c-title light" style="font-size:3.5rem; margin-bottom:1rem; text-shadow:4px 4px 0 var(--j-purple);">🚀 EXPLORE THE CODE</h2>
+      <p class="c-text light" style="max-width:700px; margin:0 auto 2rem auto; font-size:1.2rem;">Interested in how the Gemini API integrates with Unity? Check out the implementation and prompt architecture on GitHub.</p>
+      
+      <a href="https://github.com/thalhagamedev/Talk-With-Joker-.git" target="_blank" class="btn btn-red" style="padding:1rem 2.5rem; font-size:1.5rem; background:var(--j-purple); border-color:var(--j-white);">VIEW ON GITHUB</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 THALHA AHAMED — GAME DEVELOPER</p>
+  <p>TO BE CONTINUED...</p>
+</footer>
+
+</body>
+</html>
